@@ -1,0 +1,44 @@
+.navPrincipal{
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    
+    border-top: #040874 8px solid;
+    margin-bottom: 20px;
+}
+.a{
+    margin: 20px;
+    float: left;
+    display: block;
+    color: #040874;
+    text-align: center;
+    padding: 14px 26px;
+    text-decoration: none;
+    font-size: 17px;
+}
+ .a:hover {
+   /*  background: #ddd; */
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-bottom: #040874 solid;
+}
+.a.active {
+    background-color: #2196F3;
+    color: white;
+}
+.search {
+    float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+.img{
+    padding-left: 200px;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
