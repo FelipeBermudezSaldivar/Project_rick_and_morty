@@ -1,0 +1,158 @@
+.bodyDetail {
+  margin: 0;
+  padding: 0;
+  background: #430452;
+  color: #000;
+  font-family: "Roboto", sans-serif;
+}
+.contenedorDetail {
+  width: 100%;
+  max-width: 1300px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+
+  grid-template-areas:
+    "headerDetail headerDetail headerDetail headerDetail"
+    "contenidoDetail contenidoDetail contenidoDetail sidebarDetail"
+    "widget-1Detail widget-2Detail widget-2Detail sidebarDetail"
+    "footerDetail footerDetail footerDetail footerDetail";
+}
+.contenedorDetail > div,
+.contenedorDetail .contenidoDetail,
+.contenedorDetail .sidebarHome,
+.contenedorDetail .footerDetail {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 4px;
+}
+.headerDetail {
+  margin-top: 100px;
+  padding-bottom: 5px;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 15px 15px 0px 0px;
+  background: rgb(255, 255, 255);
+  grid-area: headerDetail;
+}
+.imgSliderHeader {
+  border-radius: 15px 15px 0px 0px;
+}
+.contenidoDetail {
+  grid-area: contenidoDetail;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "contCentradoDetail contCentradoDetail contCentradoDetail "
+    "contDetailIzquierda contDetailIzquierda contDetailDerecha ";
+}
+.contCentradoDetail {
+  padding: 0.5em 0.5em 0.5em 2em;
+  background: rgb(245, 245, 245);
+  grid-area: contCentradoDetail;
+  color: black;
+}
+.contDetailIzquierda {
+  padding: 0em 5em 5em 2em;
+  background: rgb(255, 255, 255);
+  grid-area: contDetailIzquierda;
+}
+.contDetailDerecha {
+  background: rgb(245, 245, 245);
+  grid-area: contDetailDerecha;
+}
+.contDetailDerecha .ulContenidoDetail2 {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+.contDetailDerecha .liContenidoDetail2 {
+  text-align: left;
+  font-size: 10px;
+  border: 1px solid #ddd; /* Add a thin border to each list item */
+  /* Prevent double borders */
+  background-color: #f6f6f6; /* Add a grey background color */
+  padding: 5px;
+  padding-top: 5px;
+  padding-left: 30px;
+}
+.iconli1Detail {
+  width: 10px;
+  padding-right: 5px;
+}
+.spanLiDetail {
+  padding: 0px;
+  font-size: 18px;
+}
+.btnDetail {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #430452;
+  color: white;
+  border: nome;
+  border-radius: 50px;
+  padding: 10px 50px 10px 50px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.btnDetail:hover {
+  background: rgb(164, 8, 203);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.contDetailIzquierda .imgDetail {
+  margin-top: 10px;
+  text-align: left;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.spanHeaderDetail {
+  padding-bottom: 0px 0px 26px;
+  color: rgb(71, 69, 69);
+}
+
+.sidebarDetail {
+  grid-column: 4/5;
+  background: #ffffff;
+  text-align: center;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  min-height: 10px;
+  grid-area: sidebarDetail;
+}
+.contenedorDetail .widget-1Detail,
+.contenedorDetail .widget-2Detail {
+  background: #55a8fd;
+  color: #fff;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.widget-1Detail {
+  grid-area: widget-1Detail;
+}
+.widget-2Detail {
+  grid-area: widget-2Detail;
+}
+.footerDetail {
+  grid-area: footerDetail;
+}
+@media screen and (max-width: 768px) {
+  .contenedorDetail {
+    grid-template-areas:
+      "headerDetail headerDetail headerDetail headerDetail"
+      "contenidoDetail contenidoDetail contenidoDetail contenidoDetail"
+      "sidebarDetail sidebarDetail sidebarDetail sidebarDetail"
+      "widget-1Detail widget-1Detail widget-2Detail widget-2Detail"
+      "footerDetail footerDetail footerDetail footerDetail";
+  }
+}
