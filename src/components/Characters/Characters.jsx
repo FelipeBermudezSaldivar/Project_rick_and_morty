@@ -8,6 +8,12 @@ import { getCharacter } from "../../redux/actions"; //de la action
 import CardCharacter from "../CardCharacter/CardCharacter";
 import Card from "../card/Card";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faCaretRight, faChevronRight, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+
+import Character from './Character.css'
+
 
 const Characters = () => {
 
@@ -19,34 +25,65 @@ const Characters = () => {
     }, []);
 
     return (
-        <div>
-            <br></br>
-            <br></br>
-            <br></br>
 
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <h1>Rederizar Characters</h1>
-            {
-                characters.map((character) =>
-                    <CardCharacter
-                        key={character?.id}
-                        id={character?.id}
-                        name={character?.name}
-                        image={character?.image}
-                        gender={character?.gender}
-                    />
+        <body class="bodyDetail">
+            <div class="contenedorDetail">
+                <header class="headerDetail">
+                    <img class="imgSliderHeader" src={require("../images/4.jpg")} />
+                    <span class="spanHeaderDetail">Anuncia tu empresa aqui </span>
+                </header>
+                <main class="contenidoDetail">
+                    <div class="contCentradoDetail">
+                        <ul class="ulContenidoHome1">
+                            <li class="liContenidoHome1"><FontAwesomeIcon class="iconli1" icon={faChevronRight} /><a class="lia1" href="/"> Home</a></li>
+                            <li class="liContenidoHome1"><FontAwesomeIcon class="iconli1" icon={faChevronRight} /><a class="lia1" href="/character"> Characters</a></li>
+                            <li class="liContenidoHome1"><FontAwesomeIcon class="iconli1" icon={faChevronRight} /><a class="lia1" href="/"> All</a></li>
+                        </ul>
+                    </div>
+                    <div class="contDetailIzquierda">
+                        <div class="divCharacter">
+                            <h1>Characters</h1>
+                            {
+                                characters.map((character) =>
+                                    <CardCharacter
+                                        key={character?.id}
+                                        id={character?.id}
+                                        name={character?.name}
+                                        image={character?.image}
+                                        gender={character?.gender}
+                                    />
 
-                )
-            }
-            
-            <Link to='/' >
-                <button>Regresar a Home</button>
-            </Link>
-        </div>
+                                )
+                            }
 
+
+                        </div>
+                    </div>
+                    <div class="contDetailDerecha">
+
+                    </div>
+
+                </main>
+                <aside class="sidebarDetail">
+                    <div class="contDetailDerecha">
+                        <h3>Filtrar Character</h3>
+                        <ul class="ulContenidoDetail2">
+                            <li class="liContenidoDetail2"><FontAwesomeIcon class="iconli1Detail" icon={faChevronRight} /><span class="spanLiDetail"> name</span></li>
+                            <li class="liContenidoDetail2"><FontAwesomeIcon class="iconli1Detail" icon={faChevronRight} /><span class="spanLiDetail"> status</span></li>
+                            <li class="liContenidoDetail2"><FontAwesomeIcon class="iconli1Detail" icon={faChevronRight} /><span class="spanLiDetail"> especies</span></li>
+                            <li class="liContenidoDetail2"><FontAwesomeIcon class="iconli1Detail" icon={faChevronRight} /><span class="spanLiDetail"> gender</span></li>
+                            <li class="liContenidoDetail2"><FontAwesomeIcon class="iconli1Detail" icon={faChevronRight} /><span class="spanLiDetail"> origin name</span></li>
+                        </ul>
+                        <Link to="/">
+                            <button class="btnDetail"><FontAwesomeIcon class="iconli1Detail" icon={faArrowRight} />Ir a Cards</button>
+                        </Link>
+                    </div>
+                </aside>
+                <div class="widget-1Detail">Widget 1</div>
+                <div class="widget-2Detail">Widget 2</div>
+                <div class="footerDetail">ultima seccion</div>
+            </div>
+        </body>
     )
 }
 

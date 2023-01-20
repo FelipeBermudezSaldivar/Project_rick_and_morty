@@ -1,5 +1,5 @@
 
-import { Routes, Route, useParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCaretRight, faChevronRight, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -60,8 +60,6 @@ const Detail = () => {
                 <div class="widget-1Detail">Widget 1</div>
                 <div class="widget-2Detail">Widget 2</div>
                 <div class="footerDetail">ultima seccion</div>
-
-
             </div>
         </body>
     )
